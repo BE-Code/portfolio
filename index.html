@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery 2.2.4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+        integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- chess.js lib -->
+    <script src="https://cdn.rawgit.com/lhartikk/simple-chess-ai/master/lib/js/chess.js"></script>
+    <!-- chessboard.js lib -->
+    <script src="https://chessboardjs.com/js/chessboard.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="initBoard()">
+
+    <!-- Used to get images -->
+    <base href="http://chessboardjs.com/" />
+
+
+    <div class="split left">
+        <div class="centered">
+
+            <h1>Chess AI Demo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a enim leo. Donec auctor eu massa non molestie. Suspendisse urna enim, pulvinar quis mollis in, tristique in ante. Sed eu ullamcorper orci. Duis gravida dignissim quam, et blandit orci blandit nec. Nullam et augue ut leo maximus tincidunt. Cras cursus mattis suscipit.</p>
+
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="centered">
+            <!-- <h3 class="board">
+                Try it ↓
+            </h3> -->
+
+            <div id="boardPad">
+                <div id="board" class="board"></div>
+            </div>
+
+            <br>
+            <div class="info">
+                Search depth:
+                <select id="search-depth">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <br>
+                <span>Positions evaluated: <span id="position-count"></span></span>
+                <br>
+                <span>Time: <span id="time"></span></span>
+                <br>
+                <span>Positions/s: <span id="positions-per-s"></span> </span>
+                <!-- <br>
+                <br>
+                <div id="move-history" class="move-history">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
